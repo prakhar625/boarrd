@@ -1,0 +1,260 @@
+@import "const";
+
+.list-element{
+  height: 200px;
+  width: 100%;
+  display: inline-block;
+  z-index: 10;
+  background-color: $gray;
+  color: $white;
+  text-align: center;
+  position: relative;
+  margin:0;
+  margin-left: -1px;
+  margin-top: -1px;
+
+
+  .list-element--title{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14rem;
+    position: absolute;
+    z-index: 70;
+    margin: 0 auto;
+    top: 50%;
+    left: 0;
+    right: 0
+  }
+
+  .list-element--shader{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 60;
+    margin-top: 0;
+  }
+}
+
+.list-element:hover{
+  z-index: 20;
+
+  box-shadow: 0 0 10px $black;
+  -webkit-filter: drop-shadow(0 0 20px $black);
+  -o-filter: drop-shadow(0 0 20px $black);
+  filter: drop-shadow(0 0 20px $black);
+
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+
+
+  .list-element--shader{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}  
+
+.list-element:nth-child(1){ @include bg-img(#{$bg-img1});}
+.list-element:nth-child(2){ @include bg-img(#{$bg-img2});}
+.list-element:nth-child(3){ @include bg-img(#{$bg-img3});}
+.list-element:nth-child(4){ @include bg-img(#{$bg-img4});}
+.list-element:nth-child(5){ @include bg-img(#{$bg-img5});}
+.list-element:nth-child(6){ @include bg-img(#{$bg-img6});}
+.list-element:nth-child(7){ @include bg-img(#{$bg-img7});}
+.list-element:nth-child(8){ @include bg-img(#{$bg-img8});}
+.list-element:nth-child(9){ @include bg-img(#{$bg-img9});}
+.list-element:nth-child(10){ @include bg-img(#{$bg-img10});}
+.list-element:nth-child(11){ @include bg-img(#{$bg-img11});}
+.list-element:nth-child(12){ @include bg-img(#{$bg-img12});}
+.list-element:nth-child(13){ @include bg-img(#{$bg-img13});}
+.list-element:nth-child(14){ @include bg-img(#{$bg-img14});}
+.list-element:nth-child(15){ @include bg-img(#{$bg-img15});}
+.list-element:nth-child(16){ @include bg-img(#{$bg-img16});}
+.list-element:nth-child(17){ @include bg-img(#{$bg-img17});}
+.list-element:nth-child(18){ @include bg-img(#{$bg-img18});}
+.list-element:nth-child(19){ @include bg-img(#{$bg-img19});}
+.list-element:nth-child(20){ @include bg-img(#{$bg-img20});}
+.list-element:nth-child(21){ @include bg-img(#{$bg-img21});}
+.list-element:nth-child(22){ @include bg-img(#{$bg-img22});}
+.list-element:nth-child(23){ @include bg-img(#{$bg-img23});}
+.list-element:nth-child(24){ @include bg-img(#{$bg-img24});}
+.list-element:nth-child(25){ @include bg-img(#{$bg-img25});}
+
+
+/* Smartphones (portrait and landscape) ----------- 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+  .list-element{
+    height: 150px;
+    width: 100%;
+  }
+} */
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+ 
+  .list-element{
+    height: 150px;
+    width: 100%;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+
+  .list-element{
+    height: 150px;
+    width: 100%;
+  }
+}
+
+/* iPads (portrait and landscape) -----------
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  
+  .list-element{
+    height: 200px;
+    width: 50%;
+  }
+} */
+
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+  .list-element{
+    height: 200px;
+    width: 50%;
+  }
+}
+/* tabs (portrait) ----------- */
+@media only screen 
+and (min-device-width : 800px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+  .list-element{
+    height: 200px;
+    width: 50%;
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+  .list-element{
+    height: 250px;
+    width: 33.33%;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  
+  .list-element{
+    height: 200px;
+    width: 20%;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+
+  .list-element{
+    height: 250px;
+    width: 20%;
+  }
+}
+
+/* iPhone 4 ----------- 
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  
+  .list-element{
+    height: 200px;
+    width: 33.33%;
+  }
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/RobotoCondensed-Light.eot);
+  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url(/fonts/RobotoCondensed-Light.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Light.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/RobotoCondensed-Regular.eot);
+  src: local('Roboto Condensed Regular'), local('RobotoCondensed-Regular'), url(/fonts/RobotoCondensed-Regular.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/RobotoCondensed-Bold.eot);
+  src: local('Roboto Condensed Regular'), local('RobotoCondensed-Bold'), url(/fonts/RobotoCondensed-Bold.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 300;
+  src: url(/fonts/RobotoCondensed-LightItalic.eot);
+  src: local('Roboto Condensed Light Italic'), local('RobotoCondensed-LightItalic'), url(/fonts/RobotoCondensed-LightItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-LightItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 400;
+  src: url(/fonts/RobotoCondensed-Italic.eot);
+  src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'), url(/fonts/RobotoCondensed-Italic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-Italic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 700;
+  src: url(/fonts/RobotoCondensed-BoldItalic.eot);
+  src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url(/fonts/RobotoCondensed-BoldItalic.eot) format('embedded-opentype'), url(/fonts/RobotoCondensed-BoldItalic.woff) format('woff');
+}

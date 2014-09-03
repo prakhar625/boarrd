@@ -1,0 +1,235 @@
+/*
+ * Web Starter Kit
+ *
+ * Multi-screen layout styles for your page. Brought to you by the
+ * Web Starter Kit team.
+ *
+ */
+@import "_h5bp";
+
+/*
+ * Visual Style Guide styles
+ * Remove if you prefer to use a CSS library, like Bootstrap
+ */
+@import "components/components";
+
+
+/* global vars*/
+$body-color: #fff;
+$highlight-green: #30d8be;
+$white: #fff;
+$gray: #ddd;
+$lightGray: #e3e3e3;
+$black: #000;
+$shadow-color: rgba(50,50,50,0.2);
+
+$bg-img1: "http://i.imgur.com/oPYO4zs.jpg";
+$bg-img2: "http://i.imgur.com/PAMWyQW.jpg";
+$bg-img3: "http://i.imgur.com/y1NiCTT.jpg";
+$bg-img4: "http://i.imgur.com/NeBQovU.jpg";
+$bg-img5: "http://i.imgur.com/wPJiKPp.jpg";
+$bg-img6: "http://i.imgur.com/GIn58EI.jpg";
+$bg-img7: "http://i.imgur.com/z5ejAuH.jpg";
+$bg-img8: "http://i.imgur.com/CjptKZy.jpg";
+$bg-img9: "http://i.imgur.com/461Asr7.jpg";
+$bg-img10: "http://i.imgur.com/NinrjuB.jpg";
+$bg-img11: "http://i.imgur.com/RIed1iM.jpg";
+$bg-img12: "http://i.imgur.com/Bb7BKvQ.jpg";
+$bg-img13: "http://i.imgur.com/nqiR5oG.jpg";
+$bg-img14: "http://i.imgur.com/FBjZblX.jpg?1";
+$bg-img15: "http://i.imgur.com/H25ncrr.jpg";
+$bg-img16: "http://i.imgur.com/haXHkiR.jpg";
+$bg-img17: "http://imgur.com/3XjoJ.jpg";
+$bg-img18: "http://i.imgur.com/ixbAVCB.jpg";
+$bg-img19: "https://cdn.shopify.com/s/files/1/0080/8552/products/Terracotta_Building_Bricks_1-1887903567-O_grande.jpg?v=1341341136";
+$bg-img20: "https://farm6.staticflickr.com/5552/14826621671_c25fe14c15_b.jpg";
+$bg-img21: "https://farm3.staticflickr.com/2926/14493872390_866313b478_b.jpg";
+$bg-img22: "http://i.imgur.com/F4MYOA7.jpg";
+$bg-img23: "http://i.imgur.com/0Ylf1TB.png";
+$bg-img24: "http://i.imgur.com/iEPUEUg.jpg";
+$bg-img25: "http://i.imgur.com/Kl4l4ti.jpg";
+
+
+
+/* mixins */
+
+@mixin bg-img($image-url){
+  background: url($image-url) 50% 50% no-repeat;
+  background-size: cover;
+}
+
+@mixin drop-shadow($x-coor, $y-coor, $blur-rad){
+  -webkit-filter: drop-shadow($x-coor $y-coor $blur-rad $shadow-color);
+  -o-filter: drop-shadow($x-coor $y-coor $blur-rad $shadow-color);
+  filter: drop-shadow($x-coor $y-coor $blur-rad $shadow-color);
+}
+
+@mixin btn-styl(){
+  height: 20px;
+  padding: 7px 11px 11px;
+  border-radius: 40px;
+  margin: 0 0 0 15px;
+  font-size: 6rem;
+  border: 1px solid rgba(0, 0, 0, 0.47);
+  background-color: transparent;
+}
+
+@mixin bg-grad-overlay(){
+  background: #56f7f2; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNTZmN2YyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBhYjk4YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(-45deg,  #56f7f2 0%, #0ab98a 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#56f7f2), color-stop(100%,#0ab98a)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  #56f7f2 0%,#0ab98a 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  #56f7f2 0%,#0ab98a 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  #56f7f2 0%,#0ab98a 100%); /* IE10+ */
+  background: linear-gradient(135deg,  #56f7f2 0%,#0ab98a 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56f7f2', endColorstr='#0ab98a',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+/* global def settings */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 2px;
+  overflow-x:hidden;
+}
+
+body {
+  position: relative;
+  font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+  background-color: $body-color;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+
+  border: none;
+}
+
+p, ul, ol {
+  font-size: 12rem;
+  line-height: 0.6250em;
+  padding-top: 0.6250em;
+padding-bottom: 0;
+}
+
+
+/* Navs n shit */
+
+.app-bar{
+  height: 60px;
+  background-color: $highlight-green;
+  width: 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 30px;
+  z-index: 200;
+  
+  .logo{
+    font-size: 16rem;
+    color: #fff;
+    font-weight: 700;
+  }
+}
+
+/* app area */
+.app-main{
+  margin-top: 60px;
+
+  .list-area{
+  }
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+  .list-element{
+    height: 150px;
+    width: 100%;
+  }
+} */
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+
+
+}
+
+/* iPads (portrait and landscape) -----------
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  
+  .list-element{
+    height: 200px;
+    width: 50%;
+  }
+} */
+
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+
+}
+/* tabs (portrait) ----------- */
+@media only screen 
+and (min-device-width : 800px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+
+
+}
